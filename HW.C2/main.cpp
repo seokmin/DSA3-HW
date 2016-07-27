@@ -127,7 +127,7 @@ int MinDistCycleBottomUp(Vertex& startVertex, Vertex& endVertex, int* minDistTab
 	return minDistTable[endVertex.index];
 }
 
-int BottomUp_SubFunc(Vertex& vertex, int startWeight, int depth,int nVertices, int* minDistTable)
+void BottomUp_SubFunc(Vertex& vertex, int startWeight, int depth,int nVertices, int* minDistTable)
 {
 	// n번 넘게 돌려고 하면 제지한다.
 	if (depth > nVertices)
